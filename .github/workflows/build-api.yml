@@ -1,0 +1,38 @@
+name: Build the API
+
+on:
+  push:
+    branched:
+      - trunk
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Merge trunk -> __compiled__
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: trunk
+          target_branch: __compiled__
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@master
+        with:
+          ref: __compiled__
+
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11' # install the python version needed
+
+      - name: install python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: execute py script # run main.py
+        run: python compile.py
+
