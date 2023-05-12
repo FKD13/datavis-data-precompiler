@@ -16,7 +16,9 @@ COMPILE_SERIES = (
     "SH.H2O.BASW.ZS",     # People using at least basic drinking water services (% of population)
     "SH.HIV.INCD.TL.P3",  # Incidence of HIV, all (per 1,000 uninfected population)
     "SE.PRM.ENRR",        # School enrollment, primary (% gross)
+    "SE.PRM.NENR",        # School enrollment, primary (% net)
     "SE.SEC.ENRR",        # School enrollment, secondary (% gross)
+    "SE.SEC.NENR",        # School enrollment, secondary (% net)
     "SE.TER.ENRR",        # School enrollment, tertiary (% gross)
 )
 
