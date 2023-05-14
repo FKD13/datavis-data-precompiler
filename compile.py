@@ -20,6 +20,9 @@ COMPILE_SERIES = (
     "SE.SEC.ENRR",        # School enrollment, secondary (% gross)
     "SE.SEC.NENR",        # School enrollment, secondary (% net)
     "SE.TER.ENRR",        # School enrollment, tertiary (% gross)
+    "SH.TBS.INCD",        # Incidence of tuberculosis (per 100,000 people)
+    "SH.IMM.IBCG",        # Immunization, BCG (% of one-year-old children)
+    "SH.XPD.CHEX.PC.CD",  # Current health expenditure per capita (current US$)
 )
 
 
